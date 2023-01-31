@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+}
+
+
+.buttonDiv{
+    position: relative;
+    left: 150px;
+}
+.button {
+    background-color: #3882F6;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+.image{
+    float: right;
+    width:400px;
+    height:200px;
+    border-radius: 30px;
+    position: relative;
+    top: 100px;
+    right: 500px;
+}
+
+.topPage{
+    background-color: #1f2937;
+    min-height:550px;
+    min-width: 100%;
+}
+h1.logo{
+    color: #F9FAF8;
+    font-size: 24px;
+    position: relative;
+    left: 8%;
+    padding-top: 20px;
+    font-family: 'Roboto';
+    
+}
+p.header{
+    color: #F9FAF8;
+    font-size: 48px;
+    font-family: 'Roboto';
+    padding-top: 100px;
+    position: relative;
+    left: 8%;
+    padding-bottom: 5px;
+    font-weight: 900;
+    margin: 0;
+}
+p.secondary{
+    position: relative;
+    left: 8%;
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-family: 'Roboto';
+    color: #E5E7EB;
+    margin: 0;
+}
+
+
+
+.middle{
+
+}
+
+.upperMid{
+    padding: 20px;
+    height: 170px;
+}
+h1.topMid{
+    color: #1f2937;
+    font-size: 36px;
+    font-style: extra-bold;
+}
+
+.lowerMiddle{
+    background-color: #E5E7EB;
+    height: 170px;
+    padding: 20px;
+    
+}
+h1.lowMid{
+    color: #1F2937;
+    font-size: 36px;
+    font-style: light italic;
+}
+
+.bottomPage{
+
+}
+h1.bottom{
+    color: black;
+}
