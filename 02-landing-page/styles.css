@@ -35,6 +35,26 @@ div{
     border: 2px solid white;
 }
 
+.menu{
+    float: right;
+    padding-right: 100px;
+    padding-top: 20px;
+}
+.menuButton{
+    background-color: #3f536e;
+    border: none;
+    color: white;
+    padding: 10px 28px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.menuButton:hover{
+    background-color: #536e91;
+    color: black;
+    
+}
+
 .image{
     float: right;
     width:400px;
@@ -72,6 +92,7 @@ h1.logo{
     position: relative;
     left: 8%;
     padding-top: 20px;
+    width: 150px;
     
 }
 p.header{
