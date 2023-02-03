@@ -2,35 +2,35 @@ let player_score = 0;
 let computer_score = 0;
 
 
-function playRound(playerSelection, computerSelection) {
-    console.log(playerSelection, computerSelection);
+rockButton.addEventListener("click", ()=> game("ROCK"))
+paperButton.addEventListener("click", ()=> game("PAPER"))
+scissorsButton.addEventListener("click", ()=> game("SCISSORS"))
 
+function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection){
-        alert("Tie!");
+        document.getElementById('situation').innerHTML = "Round was a tie!";
     }
     if (
         (playerSelection === 'ROCK' && computerSelection === 'SCISSORS') ||
         (playerSelection === 'SCISSORS' && computerSelection === 'PAPER') ||
         (playerSelection === 'PAPER' && computerSelection === 'ROCK')
     ) {
-        alert("You win!");
         player_score ++;
+        document.getElementById('player_score').innerHTML = player_score;
+        document.getElementById('situation').innerHTML = "Player won a round!";
     }
     if (
         (computerSelection === 'ROCK' && playerSelection === 'SCISSORS') ||
         (computerSelection === 'SCISSORS' && playerSelection === 'PAPER') ||
         (computerSelection === 'PAPER' && playerSelection === 'ROCK')
     ) {
-        alert("Computer win!");
         computer_score++;
+        document.getElementById('computer_score').innerHTML = computer_score;
+        document.getElementById('situation').innerHTML = "Computer won a round!";
     }
 }
 
-function getPlayerSelection(){
-    const playerInput = prompt("Give your selection: ", "");
-    const playerChoice = playerInput.toUpperCase();
-    return playerChoice;
-}
+
 
 function getComputerChoice(){
     var choices = [
@@ -42,20 +42,30 @@ function getComputerChoice(){
     return choices[random];
 }
 
-function game(winner){
+function game(playerSelection){
+    document.getElementById('player_score').innerHTML = player_score;
+    document.getElementById('computer_score').innerHTML = computer_score;
+    document.getElementById('situation').innerHTML = "First to 5 wins!";
 
-    for (let i = 0; i < 5; i++){
-        const computerSelection = getComputerChoice();
-        const playerSelection = getPlayerSelection();
-         playRound(playerSelection, computerSelection);
+    
+    const computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+    if(player_score===5){
+        document.getElementById('situation').innerHTML = "You won!";
+        reset();
     }
-
-    if (player_score > computer_score){
-            alert("Player won this game " + player_score + " to " + computer_score);
+    else if (computer_score === 5){
+        document.getElementById('situation').innerHTML = "You lost!";
+        reset();
     }
-    if (player_score < computer_score){
-            alert("Computer won this game " + computer_score + " to " + player_score);
-    }else if(player_score === computer_score){alert("Tie in best of 5")}
 }
+
+function reset(){
+    player_score = 0;
+    computer_score = 0;
+    document.getElementById('player_score').innerHTML = player_score;
+    document.getElementById('computer_score').innerHTML = computer_score;
+}
+
 
 game();
