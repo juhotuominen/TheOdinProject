@@ -1,31 +1,70 @@
-:root {
-    --grid-cols: 1;
-    --grid-rows: 1;
-  }
+body {
+  background-color: rgb(168, 192, 218);
+}
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+#controls {
+  border: 4px solid black;
+  background-color: rgb(241, 239, 235);
+  border-radius: 5px;
+  display: flex;
+  height: 800px;
+  width: 300px;
+  align-items: center;
+  vertical-align: middle;
+  flex-wrap: wrap;
+  justify-content:  space-evenly;
+  align-content: flex-start;
+}
+.title {
+  order: 1;
+  width: auto;
+  padding: 5px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+#titleText {
+  font-family: monospace;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+}
+.button {
+  background-color: rgb(205, 210, 228);
+  order: 2;
+  height: 100px;
+  width: 170px;
+  font-family: cursive;
+  font-size: large;
+  padding: 5px;
+  margin-top: 20px;
+  border-radius: 30px;
+}
+.button:hover{
+  background-color: rgb(189, 175, 157);
+}
+.active{
+  background-color: rgb(207, 207, 188);
+}
+
+#canvas {
+  display: grid;
+  grid-template-rows: repeat(16, 1fr);
+  grid-template-columns: repeat(16, 1fr);
+
+  width: 800px;
+  height: 800px;
+  background-color: rgb(223, 223, 223);
+  border: 4px solid black;
+}
 
 
-  #container {
-    display: grid;
-    grid-gap: 1em;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
-    max-width: 50%;
-    max-height: 50%;
-  }
-  
-  .grid-item {
-    padding: 1em;
-    border: 1px solid #ddd;
-  }
-  .grid-item:hover {
-    background-color: black;
-    transition: 0.8s;
-  }
-  .onhover {
-    background-color: black;
-  }
-
-  body{
-    max-width: 100%;
-    max-height: 100vh;
-  }
+.cell {
+  background-color:white;
+  border: 1px solid rgb(185, 185, 185);
+  margin: -1px -1px -1px -1px;
+  opacity: 1;
+}
